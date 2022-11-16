@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
+    // movementInput을 분할하는 함수 movementInput의 x,y값인 0~1을 가져온다.
     private void OnEnable(){
         if(playerControls == null){
              playerControls = new PlayerControls();
@@ -33,7 +34,15 @@ public class InputManager : MonoBehaviour
 
         playerControls.Disable();
     }
-    // movementInput을 분할하는 함수 movementInput의 x,y값인 0~1을 가져온다.
+    
+
+    // 수직, 수평으로 입력받는 함수를 외부로 보내는 함수
+    public void HandleAllInputs(){
+        HandleMovementInput();
+        // HandleJumpingInput
+        // HandleActionInput
+    }
+
     private void HandleMovementInput(){
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
