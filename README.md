@@ -25,6 +25,7 @@ Velocity: 같은 힘을 가해도 등속운동하도록 물리엔진이 자동�
 대상 오브젝트를 바라보게 한다. 해당 오브젝트의 회전 값을 지정
 - Quaternion.Slerp(회전a, 회전b, 시간)
 회전a는 해당오브젝트의 회전값, 회전b는 대상오브젝트의 회전값이다.
+A회전값에서 B회전값까지 시간동안 회전하게 된다.
 
 
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
