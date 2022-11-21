@@ -33,3 +33,5 @@ https://ksuo.tistory.com/48
 https://euncero.tistory.com/361
 (선형보간[Lerp]과 구면선형보간[Slerp])
 https://gnaseel.tistory.com/14
+Mathf함수정리
+https://lolmovies.tistory.com/33
