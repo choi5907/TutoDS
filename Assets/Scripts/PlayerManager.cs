@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     // 스크립트 불러오기
     InputManager inputManager;
     PlayerLocomotion playerLocomotion;
+    
     private void Awake() {
         inputManager = GetComponent<InputManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
@@ -16,6 +17,7 @@ public class PlayerManager : MonoBehaviour
         inputManager.HandleAllInputs();
     }
     // PlayerLocomotion의 이동,회전제어 함수를 불러온다.
+    // 이동을 처리하는 과정을 FixedUpdate에서 처리하는게 좋다.
     private void FixedUpdate() {
         playerLocomotion.HandleAllMovement();
     }

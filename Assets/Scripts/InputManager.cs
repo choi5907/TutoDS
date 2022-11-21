@@ -7,12 +7,17 @@ public class InputManager : MonoBehaviour
 {
     // InputAction PlayerControls스크립트 변수, 입력값을 X, Y축으로 받을 2D Vector변수
     PlayerControls playerControls;
-
+    AnimatorManager animatorManager;
+    
     public Vector2 movementInput;
     // 수직입력을 받는 변수, 수평입력을 받는 변수 -> movementInput을 개별변수로 분할해서 담는다.
+    private float moveAmount;
     public float verticalInput;
     public float horizontalInput;
 
+    private void Awake(){
+        animatorManager = GetComponent<AnimatorManager>();
+    }
     // movementInput을 분할하는 함수 movementInput의 x,y값인 0~1을 가져온다.
     private void OnEnable(){
         if(playerControls == null){
@@ -35,7 +40,6 @@ public class InputManager : MonoBehaviour
         playerControls.Disable();
     }
     
-
     // 수직, 수평으로 입력받는 함수를 외부로 보내는 함수
     public void HandleAllInputs(){
         HandleMovementInput();
@@ -46,5 +50,9 @@ public class InputManager : MonoBehaviour
     private void HandleMovementInput(){
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
+        // Mathf.Clamp - 특정 범위를 벗어나지 않도록 도와주는 함수, Clamp01 - 0과 1사이의 값을 반환한다
+        // Mathf.Abs - 데이터 절대값 반환
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
+        animatorManager.UpdateAnimatorValues(0, moveAmount);
     }
 }
