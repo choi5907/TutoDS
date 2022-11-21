@@ -37,6 +37,16 @@ A회전값에서 B회전값까지 시간동안 회전하게 된다.
 - SetFloat(파라미터, 대상 값, damptime, time.deltatime)
 해당 파라미터에 대상 값으로 가기까지의 damptime을 지정해준다.(값이 클 수록 이전 값에 가까운 값 출력)그리고 실항간의 시간 간격을 프레임단위 시간으로 설정
 완성 된 AnimatorManager를 InputManager에서 입출력을 담당해준다.
+  
+> EP03 - Camera
+Vector3.SmoothDamp(Vector3 current, Vector3 target, ref Vector3 Velocity, float smotthTime, float maxSpeed, float deltaTime);
+current : 현재 오브젝트의 위치
+target : 따라갈 대상의 위치
+Velocity : 속도
+SmoothTime : 목표도달까지 걸리는 시간
+// 최대 속도와 호출까지 걸린 시간은 생략 가능하다.
+maxSpeed : 최대속도
+deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 https://ksuo.tistory.com/48
@@ -48,4 +58,5 @@ https://lolmovies.tistory.com/33
 애니메이터 관련
 https://sharkmino.tistory.com/1444
 Vector3.SmoothDamp
+https://onecoke.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-%ED%99%94%EB%A9%B4-%EB%B6%80%EB%93%9C%EB%9F%BD%EA%B2%8C-%EC%9B%80%EC%A7%81%EC%9D%B4%EA%B8%B0-SmoothDamp
 https://wonsorang.tistory.com/729
