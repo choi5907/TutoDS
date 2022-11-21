@@ -31,6 +31,12 @@ A회전값에서 B회전값까지 시간동안 회전하게 된다.
 1. Animator Controller >  BlendTree & Parameter 추가. > 블렌드트리 2D FreeForm Directional 설정
 2. AnimatorManager 스크립트 생성, 컴포넌트 추가, StringToHash와 SetFloat으로 입력값의 경계를 나누어서 파라미터를 찾아 넣어준다.
 3. InputManager 스크립트에서 AnimatorManager 컴포넌트 추가 > 애니메이터매니저에서 다룰 입력값을 0~1사이의 절대값으로 반환해준다.
+- StringToHash
+애니메이터의 모든 객체는 해쉬(int로 구성된 값)로 접근 가능, Layer로 몸체 분리 가능
+애니메이터의 파라미터를 이름을 통해 접근, 해쉬를 써서 가져온 뒤 변수에 저장한다. 경계값 외의 수치를 딱 떨어지는 숫자로 지정해주고
+- SetFloat(파라미터, 대상 값, damptime, time.deltatime)
+해당 파라미터에 대상 값으로 가기까지의 damptime을 지정해준다.(값이 클 수록 이전 값에 가까운 값 출력)그리고 실항간의 시간 간격을 프레임단위 시간으로 설정
+완성 된 AnimatorManager를 InputManager에서 입출력을 담당해준다.
 
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 https://ksuo.tistory.com/48
@@ -39,3 +45,5 @@ https://euncero.tistory.com/361
 https://gnaseel.tistory.com/14
 Mathf함수정리
 https://lolmovies.tistory.com/33
+애니메이터 관련
+https://sharkmino.tistory.com/1444
