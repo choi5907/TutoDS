@@ -47,3 +47,5 @@ Mathf함수정리
 https://lolmovies.tistory.com/33
 애니메이터 관련
 https://sharkmino.tistory.com/1444
+Vector3.SmoothDamp
+https://wonsorang.tistory.com/729
