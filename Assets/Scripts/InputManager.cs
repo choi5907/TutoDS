@@ -8,8 +8,10 @@ public class InputManager : MonoBehaviour
     // InputAction PlayerControls스크립트 변수, 입력값을 X, Y축으로 받을 2D Vector변수
     PlayerControls playerControls;
     AnimatorManager animatorManager;
-    
+
     public Vector2 movementInput;
+    public Vector2 cameraInput;
+    
     // 수직입력을 받는 변수, 수평입력을 받는 변수 -> movementInput을 개별변수로 분할해서 담는다.
     private float moveAmount;
     public float verticalInput;
@@ -31,6 +33,7 @@ public class InputManager : MonoBehaviour
             // void PerformedHandler(CallbackContext context) {
             // // i 대신에 context를 지정해줄 함수 performedHandler;
             // movementInput = context.ReadValue<Vector2>()}
+            playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
         }
         playerControls.Enable();    // PlayerControls는 Enable와 Disable을 해야한다.
     }
