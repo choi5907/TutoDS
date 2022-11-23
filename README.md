@@ -48,6 +48,11 @@ SmoothTime : 목표도달까지 걸리는 시간
 maxSpeed : 최대속도
 deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
+
+FindObjectOfType
+특정 오브젝트를 찾기위해 사용, Hierarchy 내에 모든 Object들을 검색 > 오브젝트 자체에 접근가능
+GetComponent
+특정 오브젝트의 컴포넌트를 찾기, 지정된 오브젝트의 컴포넌트를 사용
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 https://ksuo.tistory.com/48
 https://euncero.tistory.com/361
