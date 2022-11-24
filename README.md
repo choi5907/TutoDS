@@ -49,6 +49,12 @@ maxSpeed : 최대속도
 deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
 
+Transform.Rotation
+오브젝트의 절대적인 회전 각도. 회전은 쿼터니언으로 되어있다. Vector3의 오일러각도를 쿼터니언으로 변환 대입해야한다.
+transform.Rotation = Quaternion.Euler(x, y, z) Vector3의 오일러각도를 쿼터니언으로 변환해준다.
+Transform.localRotation
+오브젝트의 상대적인 회전 각도. 부모가 있을 경우 부모를 기준으로 상대적인 회전 각도를 나타낸다.
+
 FindObjectOfType
 특정 오브젝트를 찾기위해 사용, Hierarchy 내에 모든 Object들을 검색 > 오브젝트 자체에 접근가능
 GetComponent
