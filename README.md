@@ -48,6 +48,9 @@ SmoothTime : 목표도달까지 걸리는 시간
 maxSpeed : 최대속도
 deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
+현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리
+Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)
+
 
 Transform.Rotation
 오브젝트의 절대적인 회전 각도. 회전은 쿼터니언으로 되어있다. Vector3의 오일러각도를 쿼터니언으로 변환 대입해야한다.
