@@ -26,6 +26,6 @@ public class PlayerManager : MonoBehaviour
     // 업데이트와 동일하지만 프레임이 끝나고 실행
     private void LateUpdate()
     {
-        cameraManager.FollowTarget();
+        cameraManager.HandleAllCameraMovement();
     }
 }
