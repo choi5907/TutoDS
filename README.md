@@ -71,7 +71,9 @@ Vector3을 대입하면 크기 변경 가능. 부모가 없다면 lossyScale과 
 - FindObjectOfType
 특정 오브젝트를 찾기위해 사용, Hierarchy 내에 모든 Object들을 검색 > 오브젝트 자체에 접근가능  
 - GetComponent
-특정 오브젝트의 컴포넌트를 찾기, 지정된 오브젝트의 컴포넌트를 사용  
+특정 오브젝트의 컴포넌트를 찾기, 지정된 오브젝트의 컴포넌트를 사용
+- Mathf.Abs(절대값을 반환할 수)
+- Mathf.round(반올림할 수)
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0  
 https://ksuo.tistory.com/48  
 https://euncero.tistory.com/361  
