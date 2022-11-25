@@ -48,9 +48,14 @@ SmoothTime : 목표도달까지 걸리는 시간
 maxSpeed : 최대속도
 deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
-현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리
+현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리(생략 가능했었다)
 Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)
-
+현재 위치, Box의 절반 사이즈, Ray의 방향, RaycastHit 결과, Box의 회전값, BoxCast를 진행할 거리
+Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance)
+현재 위치, Sphere의 크기(x,y,z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, Sphere의 회전값, SphereCast를 진행할 거리
+Physics.SphereCast(transform.position, sphereScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
+Capsule의 시작점, Capsule의 끝점, Capsule의 크기(x, z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, capsule의 회전값, CapsuleCast를 진행할 거리
+Physics.CapsuleCast(transform.position, transform.position, capsuleScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
 
 Transform.Rotation
 오브젝트의 절대적인 회전 각도. 회전은 쿼터니언으로 되어있다. Vector3의 오일러각도를 쿼터니언으로 변환 대입해야한다.
@@ -58,6 +63,12 @@ transform.Rotation = Quaternion.Euler(x, y, z) Vector3의 오일러각도를 쿼
 Transform.localRotation
 오브젝트의 상대적인 회전 각도. 부모가 있을 경우 부모를 기준으로 상대적인 회전 각도를 나타낸다.
 
+Transform.lossyScale
+오브젝트의 절대적인 크기를 나타낸다. 읽기전용(readonly), 자식이 회전할 경우 크기가 왜곡되므로 크기를 설정할 수 없다.
+부모를 null로 설정 > localScale을 설정 > 다시 부모 설정 해주면 크기 설정을 한 것과 동일
+Transform.localScale
+오브젝트의 상대적인 크기를 나타낸다. 부모가 잇을 경우 부모를 기준으로 상대적인 크기를 나타낸다. 부모의 크기가 변경될 경우 자식도 변경
+Vector3을 대입하면 크기 변경 가능. 부모가 없다면 lossyScale과 동일.   
 FindObjectOfType
 특정 오브젝트를 찾기위해 사용, Hierarchy 내에 모든 Object들을 검색 > 오브젝트 자체에 접근가능
 GetComponent
@@ -74,3 +85,5 @@ https://sharkmino.tistory.com/1444
 Vector3.SmoothDamp
 https://onecoke.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-%ED%99%94%EB%A9%B4-%EB%B6%80%EB%93%9C%EB%9F%BD%EA%B2%8C-%EC%9B%80%EC%A7%81%EC%9D%B4%EA%B8%B0-SmoothDamp
 https://wonsorang.tistory.com/729
+유니티 기본 10가지
+https://unityindepth.tistory.com/15
