@@ -48,7 +48,7 @@ SmoothTime : 목표도달까지 걸리는 시간
 maxSpeed : 최대속도  
 deltaTime : 마지막 작동을 위한 호출로부터의 시간  
 
-- Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)
+- Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)  
 // 현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리(생략 가능했었다)  
 - Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance)  
 // 현재 위치, Box의 절반 사이즈, Ray의 방향, RaycastHit 결과, Box의 회전값, BoxCast를 진행할 거리  
