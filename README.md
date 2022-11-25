@@ -39,7 +39,7 @@ A회전값에서 B회전값까지 시간동안 회전하게 된다.
 완성 된 AnimatorManager를 InputManager에서 입출력을 담당해준다.
   
 > EP03 - Camera
-Vector3.SmoothDamp(Vector3 current, Vector3 target, ref Vector3 Velocity, float smotthTime, float maxSpeed, float deltaTime);
+- Vector3.SmoothDamp(Vector3 current, Vector3 target, ref Vector3 Velocity, float smotthTime, float maxSpeed, float deltaTime);
 current : 현재 오브젝트의 위치
 target : 따라갈 대상의 위치
 Velocity : 속도
@@ -48,30 +48,29 @@ SmoothTime : 목표도달까지 걸리는 시간
 maxSpeed : 최대속도
 deltaTime : 마지막 작동을 위한 호출로부터의 시간
 
-현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리(생략 가능했었다)
-Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)
-현재 위치, Box의 절반 사이즈, Ray의 방향, RaycastHit 결과, Box의 회전값, BoxCast를 진행할 거리
-Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance)
-현재 위치, Sphere의 크기(x,y,z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, Sphere의 회전값, SphereCast를 진행할 거리
-Physics.SphereCast(transform.position, sphereScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
-Capsule의 시작점, Capsule의 끝점, Capsule의 크기(x, z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, capsule의 회전값, CapsuleCast를 진행할 거리
-Physics.CapsuleCast(transform.position, transform.position, capsuleScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
+// 현재 위치, Ray의 방향, RaycastHit 결과, Raycast를 진행할 거리(생략 가능했었다)
+- Physics.Raycast(transform.position, transform.forward, out RaycahstHit, _maxDistance)
+// 현재 위치, Box의 절반 사이즈, Ray의 방향, RaycastHit 결과, Box의 회전값, BoxCast를 진행할 거리
+- Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance)
+// 현재 위치, Sphere의 크기(x,y,z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, Sphere의 회전값, SphereCast를 진행할 거리
+- Physics.SphereCast(transform.position, sphereScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
+// Capsule의 시작점, Capsule의 끝점, Capsule의 크기(x, z 중 가장 큰 값이 크기), Ray의 방향, RaycastHit 결과, capsule의 회전값, CapsuleCast를 진행할 거리
+- Physics.CapsuleCast(transform.position, transform.position, capsuleScale / 2.0f, transform.forward, out RaycastHit hit, _maxDistance)
 
-Transform.Rotation
+- Transform.Rotation
 오브젝트의 절대적인 회전 각도. 회전은 쿼터니언으로 되어있다. Vector3의 오일러각도를 쿼터니언으로 변환 대입해야한다.
 transform.Rotation = Quaternion.Euler(x, y, z) Vector3의 오일러각도를 쿼터니언으로 변환해준다.
-Transform.localRotation
+- Transform.localRotation
 오브젝트의 상대적인 회전 각도. 부모가 있을 경우 부모를 기준으로 상대적인 회전 각도를 나타낸다.
-
-Transform.lossyScale
+- Transform.lossyScale
 오브젝트의 절대적인 크기를 나타낸다. 읽기전용(readonly), 자식이 회전할 경우 크기가 왜곡되므로 크기를 설정할 수 없다.
 부모를 null로 설정 > localScale을 설정 > 다시 부모 설정 해주면 크기 설정을 한 것과 동일
-Transform.localScale
+- Transform.localScale
 오브젝트의 상대적인 크기를 나타낸다. 부모가 잇을 경우 부모를 기준으로 상대적인 크기를 나타낸다. 부모의 크기가 변경될 경우 자식도 변경
 Vector3을 대입하면 크기 변경 가능. 부모가 없다면 lossyScale과 동일.   
-FindObjectOfType
+- FindObjectOfType
 특정 오브젝트를 찾기위해 사용, Hierarchy 내에 모든 Object들을 검색 > 오브젝트 자체에 접근가능
-GetComponent
+- GetComponent
 특정 오브젝트의 컴포넌트를 찾기, 지정된 오브젝트의 컴포넌트를 사용
 https://daebalstudio.tistory.com/entry/%EC%95%A1%EC%85%98%EA%B3%BC-%EB%9E%8C%EB%8B%A4-%ED%95%A8%EC%88%98-%EC%99%84%EB%B2%BD%ED%95%98%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 https://ksuo.tistory.com/48
