@@ -1,5 +1,5 @@
 # TutoDS
-
+UnityVersion 21.3.13f  
 > EP01 - InputSystem  
 1. PakageManager에서 InputSystem설치  
 2. 프로젝트에서 InputActions생성 > ActionMaps > Actions > ActionType과 Key지정  
